@@ -1,7 +1,9 @@
+<link rel="stylesheet" href="/stylesheets/style.css" />
 <body>
+  <div class="form-container">
   <h1>Create a new account</h1>
 
-  <form action="/auth/sign-up" method="post">
+  <form action="/auth/sign-up" method="post" enctype="multipart/form-data">
 <label>Username:</label>
 <input type="text" name="username">
 <br>
@@ -11,6 +13,14 @@
 <label>Confirm Password:</label>
 <input type="password" name="confirmPassword">
 <br>
+<label>Upload photo:</label>
+<input type="file" name="photo" accept="image/*" /><br><br>
+
+<div id="photoPreview" class="photo-preview">
+  <!-- Image preview will appear here after uploading -->
+</div>
+
 <button type="submit">Sign up</button>
   </form>
+  </div>
 </body>
