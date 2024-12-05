@@ -1,0 +1,12 @@
+<body>
+  <%- include('../partials/_navbar.ejs') %>
+
+  <h1><%= book.title %></h1>
+  <h3><%= book.author %></h3>
+  <h3><%= book.genre %></h3>
+
+  <form action="/books/<%= book._id %>?_method=DELETE" method="POST">
+    <button type="submit">Delete this book</button>
+  </form>
+  <a href="/books/<%= book._id %>/edit">Edit this book</a>
+</body>
