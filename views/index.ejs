@@ -3,19 +3,19 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/stylesheets/style.css" />
     <title>Document</title>
   </head>
   <body>
     <% if (user) { %>
-    <h1>Welcome to the app, <%= user.username %>!</h1>
+    <h1>Welcome to the Bahrain library, <%= user.username %>!</h1>
     <a href="/auth/sign-out">Sign out</a>
     <% } else { %>
-    <h1>Welcome to the app, guest.</h1>
+    <h1>Welcome to the Bahrain library</h1>
     <p>
-      <a href="/auth/sign-up">Sign up</a> or
-      <a href="/auth/sign-in">sign in</a>.
+      <a href="/auth/sign-up">Sign up</a> 
+      <a href="/auth/sign-in">login</a>.
     </p>
     <% } %>
-    <a href="/vip">VIP LOUNGE</a>
   </body>
 </html>
