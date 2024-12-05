@@ -1,0 +1,10 @@
+<body>
+  <%- include('../partials/_navbar.ejs') %>
+  <ul>
+    <% books.forEach((book) => { %>
+    <li>
+      <a href="/books/<%= book._id %>"> <%= book.title %></a>
+    </li>
+    <% }) %>
+  </ul>
+</body>
