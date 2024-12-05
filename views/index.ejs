@@ -3,22 +3,21 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="/stylesheets/style.css" />
+    <link rel="stylesheet" href="../public/stylesheets/style1.css" />
     <title>Document</title>
   </head>
   <body>
-
-    <%- include('./partials/_navbar.ejs') %>
-
-    <% if (user) { %>
-    <h1>Welcome to the Bahrain library, <%= user.username %>!</h1>
-    <a href="/auth/sign-out">Sign out</a>
-    <% } else { %>
-    <h1>Welcome to the Bahrain library</h1>
-    <p>
-      <a href="/auth/sign-up">Sign up</a> 
-      <a href="/auth/sign-in">login</a>.
-    </p>
-    <% } %>
+    <div class="content-container">
+      <% if (user) { %>
+        <h1 class="title">Welcome to the Bahrain library, <%= user.username %>!</h1>
+        <a href="/auth/sign-out" class="auth-link">Sign out</a>
+      <% } else { %>
+        <p>
+          <h1 class="title">Welcome to the Bahrain library!</h1>
+          <a href="/auth/sign-up" class="auth-link">Sign up</a> 
+          <a href="/auth/sign-in" class="auth-link">Login</a>.
+        </p>
+      <% } %>
+    </div>
   </body>
 </html>

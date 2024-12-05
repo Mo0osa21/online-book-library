@@ -20,6 +20,8 @@ app.use(methodOverride('_method'))
 
 app.use(morgan('dev'))
 
+app.use(express.static(path.join(__dirname, 'public')));
+
 app.use(
   session({
     secret: process.env.SESSION_SECRET,
@@ -73,9 +75,6 @@ app.use(express.urlencoded({ extended: false }));
 app.use(methodOverride('_method'));
 // app.use(morgan('dev'));
 
-//new code below this line ----
-app.use(express.static(path.join(__dirname, 'public')));
-//new code above this line ---
 
 app.use(
   session({

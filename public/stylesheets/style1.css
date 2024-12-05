@@ -1,5 +1,10 @@
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700');
-
+/* Reset default margin and padding */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+ }
+  
 body {
     display: flex;                      /* Enable Flexbox */
     justify-content: center;            /* Center content horizontally */
@@ -7,7 +12,7 @@ body {
     height: 100vh;                      /* Make sure body takes the full height of the viewport */
     margin: 0;                          /* Remove default margin */
     font-family: Arial, sans-serif;     /* Set a clean font */
-    background-image: url('../background.jpeg'); /* Set the background image */
+    background-image: url('../../background.jpeg'); /* Set the background image */
     background-size: cover;             /* Make the image cover the entire body */
     background-position: center;        /* Center the image */
     background-repeat: no-repeat;       /* Prevent the image from repeating */
@@ -99,4 +104,8 @@ a:hover {
     margin-top: 10px;
     border: 2px solid #ccc;
 }
-
+  
+.title {
+    text-align: center;
+    margin-bottom: 20px;
+}
