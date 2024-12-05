@@ -1,4 +1,4 @@
-<% if (user ) { %>
+<% if (user && user.isAdmin ) { %>
 <a href="/books">View all Books</a>
 <a href="/books/new">add a New Book</a>
 <a href="/auth/sign-out">Sign Out</a>
