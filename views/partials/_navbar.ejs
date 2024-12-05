@@ -1,0 +1,15 @@
+<% if (user ) { %>
+<a href="/books">View all Books</a>
+<a href="/books/new">add a New Book</a>
+<a href="/auth/sign-out">Sign Out</a>
+<% } else if(user){ %>
+<p>
+  <a href="/books">View all Books</a>
+  <a href="/auth/sign-out">Sign Out</a>
+</p>
+<% } else { %>
+<p>
+  <a href="/auth/sign-up">Sign up</a>
+  <a href="/auth/sign-in">sign in</a>.
+</p>
+<% } %>

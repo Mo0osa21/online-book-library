@@ -1,0 +1,48 @@
+<body>
+  <%- include('../partials/_navbar.ejs') %>
+
+  <h1>Update <%= book.title %></h1>
+
+  <form method="POST" action="/books/<%= book._id %>?_method=PUT">
+    <label for="title">Book Title:</label>
+    <input
+      type="text"
+      name="title"
+      id="title"
+      value="<%= book.title %>"
+      required
+    />
+    <br />
+
+    <label for="author">Author:</label>
+    <input
+      type="text"
+      name="author"
+      id="author"
+      value="<%= book.author %>"
+      required
+    />
+    <br />
+
+    <label for="genre">Genres:</label>
+    <input
+      type="text"
+      name="genre"
+      id="genre"
+      value="<%= book.genre %>"
+      required
+    />
+    <br />
+
+    <label for="isAvailable">Available:</label>
+    <input
+      type="checkbox"
+      name="isAvailable"
+      id="isAvailable"
+      <%= book.isAvailable ? 'checked' : '' %>
+    />
+    <br />
+
+    <button type="submit">Update Book</button>
+  </form>
+</body>
