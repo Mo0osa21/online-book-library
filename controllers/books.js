@@ -2,6 +2,7 @@ const router = require('express').Router()
 const User = require('../models/user')
 const Review = require('../models/review')
 const Book = require('../models/book')
+const isAdmin = require('../middleware/is-admin')
 
 router.get('/', async (req, res) => {
   try {
@@ -15,7 +16,7 @@ router.get('/', async (req, res) => {
   }
 })
 
-router.get('/new', async (req, res) => {
+router.get('/new', isAdmin, async (req, res) => {
   res.render('books/new.ejs')
 })
 
@@ -53,7 +54,7 @@ router.get('/:bookId', async (req, res) => {
   }
 })
 
-router.get('/:bookId/edit', async (req, res) => {
+router.get('/:bookId/edit', isAdmin, async (req, res) => {
   try {
     const currentBook = await Book.findById(req.params.bookId)
     res.render('books/edit.ejs', {
@@ -78,7 +79,7 @@ router.put('/:bookId', async (req, res) => {
   }
 })
 
-router.delete('/:bookId', async (req, res) => {
+router.delete('/:bookId', isAdmin, async (req, res) => {
   try {
     const book = await Book.findById(req.params.bookId)
       await Book.deleteOne()
