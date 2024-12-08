@@ -7,11 +7,6 @@ body {
     height: 100vh;                      /* Make sure body takes the full height of the viewport */
     margin: 0;                          /* Remove default margin */
     font-family: Arial, sans-serif;     /* Set a clean font */
-    background-image: url('../background.jpeg'); /* Set the background image */
-    background-size: cover;             /* Make the image cover the entire body */
-    background-position: center;        /* Center the image */
-    background-repeat: no-repeat;       /* Prevent the image from repeating */
-    background-attachment: fixed;        /* Light background color for the page */
 }
 
 /* Styling for the form container */
