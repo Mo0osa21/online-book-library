@@ -12,6 +12,7 @@ const passUserToView = require('./middleware/pass-user-to-view.js')
 const methodOverride = require('method-override')
 const authCtrl = require('./controllers/auth')
 const booksCtrl = require('./controllers/books')
+const reviewsCtrl = require('./controllers/reviews')
 const isSignedIn = require('./middleware/is-signed-in.js')
 
 app.use(express.urlencoded({ extended: false }))
@@ -39,6 +40,7 @@ app.get('/', (req, res) => {
 app.use('/auth', authCtrl)
 app.use(isSignedIn)
 app.use('/books', booksCtrl)
+app.use('/reviews', reviewsCtrl)
 
 mongoose.connect(process.env.MONGODB_URI)
 mongoose.connection.on('connected', () => {

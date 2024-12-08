@@ -43,16 +43,14 @@ router.post('/', async (req, res) => {
 
 router.get('/:bookId', async (req, res) => {
   try {
-    const populatedBook = await Book.findById(req.params.bookId)
-
-    res.render('books/show.ejs', {
-      book: populatedBook
-    })
+    const book = await Book.findById(req.params.bookId);
+    const reviews = await Review.find({ book: book._id }).populate('user', 'username');
+    res.render('books/show.ejs', { book, reviews });
   } catch (error) {
-    console.log(error)
-    res.redirect('/')
+    console.log(error);
+    res.redirect('/');
   }
-})
+});
 
 router.get('/:bookId/edit', isAdmin, async (req, res) => {
   try {
