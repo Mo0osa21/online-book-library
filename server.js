@@ -51,33 +51,14 @@ mongoose.connection.on('connected', () => {
 
 app.use(bodyParser.urlencoded({ extended: true }));
 
-// Set up Multer storage configuration
-const storage = multer.diskStorage({
-  destination: (req, file, cb) => {
-    cb(null, 'uploads/'); // Folder where files will be stored
-  },
-  filename: (req, file, cb) => {
-    cb(null, Date.now() + path.extname(file.originalname)); // Rename the file to avoid duplicates
-  }
-});
-
-const upload = multer({ storage: storage });
-
-const uploadDir = './uploads';
-if (!fs.existsSync(uploadDir)) {
-  fs.mkdirSync(uploadDir);
-}
 
 app.use('/uploads', express.static('uploads'));
-/////////////////////////////////////////////////////////////////////////
+
 
 app.use(express.urlencoded({ extended: false }));
 app.use(methodOverride('_method'));
-// app.use(morgan('dev'));
 
-//new code below this line ----
 app.use(express.static(path.join(__dirname, 'public')));
-//new code above this line ---
 
 app.use(
   session({

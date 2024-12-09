@@ -66,16 +66,28 @@ router.get('/:bookId/edit', isAdmin, async (req, res) => {
 
 router.put('/:bookId', async (req, res) => {
   try {
-    const currentBook = await Book.findById(req.params.bookId)
+    const currentBook = await Book.findById(req.params.bookId);
 
-      await currentBook.updateOne(req.body)
-      res.redirect('/books')
+    if (!currentBook) {
+      return res.status(404).send('Book not found');
+    }
 
+    if (req.body.title !== undefined) currentBook.title = req.body.title;
+    if (req.body.author !== undefined) currentBook.author = req.body.author;
+    if (req.body.isAvailable !== undefined) {
+      currentBook.isAvailable = req.body.isAvailable === 'on'; 
+    }else{
+      currentBook.isAvailable = false;
+    }
+
+    await currentBook.save();
+
+    res.redirect('/books');
   } catch (error) {
-    console.log(error)
-    res.redirect('/')
+    console.error(error);
+    res.redirect('/');
   }
-})
+});
 
 router.delete('/:bookId', isAdmin, async (req, res) => {
   try {
