@@ -1,13 +1,19 @@
 <body>
   <%- include('../partials/_navbar.ejs') %>
+  <h1>All Books</h1>
+  <form action="/search" method="GET">
+    <input type="text" name="query" placeholder="Search..." required />
+    <button type="submit">Search</button>
   <div class="index2page">
 
   <ul>
     <% books.forEach((book) => { %>
-    <li>
-      <a href="/books/<%= book._id %>"> <%= book.title %></a>
-    </li>
+      <div class="book">
+        <a href="/books/<%= book._id %>"> 
+          <img src="<%= book.imageUrl %>" alt="<%= book.title %>" />
+        </a>
     <% }) %>
   </ul>
   </div>
 </body>
+  
