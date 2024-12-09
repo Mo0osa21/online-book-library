@@ -4,7 +4,7 @@
 
   <h1>Add a New Book</h1>
 
-  <form method="POST" action="/books">
+  <form method="POST" action="/books" enctype="multipart/form-data">
     <label for="title">Book Title:</label>
     <input type="text" name="title" id="title" required />
     <br />
@@ -21,6 +21,10 @@
     <label for="isAvailable">Available:</label>
     <input type="checkbox" name="isAvailable" id="isAvailable" checked />
     <br />
+
+    <label for="photo">Upload Photo:</label>
+  <input type="file" name="photo" id="photo" accept="image/*" required>
+  <br />
 
     <button type="submit">Add Book</button>
   </form>

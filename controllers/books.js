@@ -3,6 +3,8 @@ const User = require('../models/user')
 const Review = require('../models/review')
 const Book = require('../models/book')
 const isAdmin = require('../middleware/is-admin')
+const upload = require('../middleware/upload');
+
 
 router.get('/', async (req, res) => {
   try {
@@ -20,7 +22,7 @@ router.get('/new', isAdmin, async (req, res) => {
   res.render('books/new.ejs')
 })
 
-router.post('/', async (req, res) => {
+router.post('/',upload.single('photo'), async (req, res) => {
   try {
     const { title, author, description, genre, isAvailable } = req.body
 
@@ -29,7 +31,8 @@ router.post('/', async (req, res) => {
       author,
       description,
       genre,
-      isAvailable: isAvailable === 'on'
+      isAvailable: isAvailable === 'on',
+      photo: req.file.path
     })
 
     await newBook.save()
@@ -66,16 +69,28 @@ router.get('/:bookId/edit', isAdmin, async (req, res) => {
 
 router.put('/:bookId', async (req, res) => {
   try {
-    const currentBook = await Book.findById(req.params.bookId)
+    const currentBook = await Book.findById(req.params.bookId);
 
-      await currentBook.updateOne(req.body)
-      res.redirect('/books')
+    if (!currentBook) {
+      return res.status(404).send('Book not found');
+    }
 
+    if (req.body.title !== undefined) currentBook.title = req.body.title;
+    if (req.body.author !== undefined) currentBook.author = req.body.author;
+    if (req.body.isAvailable !== undefined) {
+      currentBook.isAvailable = req.body.isAvailable === 'on'; 
+    }else{
+      currentBook.isAvailable = false;
+    }
+
+    await currentBook.save();
+
+    res.redirect('/books');
   } catch (error) {
-    console.log(error)
-    res.redirect('/')
+    console.error(error);
+    res.redirect('/');
   }
-})
+});
 
 router.delete('/:bookId', isAdmin, async (req, res) => {
   try {
