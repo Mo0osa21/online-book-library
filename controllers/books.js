@@ -22,7 +22,11 @@ router.get('/new', isAdmin, async (req, res) => {
   res.render('books/new.ejs')
 })
 
+
+
+
 router.post('/',upload.fields([{ name: 'photo' }, { name: 'pdfFile' }]), async (req, res) => {
+
   try {
     const { title, author, description, genre, isAvailable } = req.body
 
@@ -44,6 +48,7 @@ router.post('/',upload.fields([{ name: 'photo' }, { name: 'pdfFile' }]), async (
     res.status(500).send('An error occurred while adding the book.')
   }
 })
+
 
 router.get('/:bookId', async (req, res) => {
   try {
