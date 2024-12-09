@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Edit Profile</title>
+  </head>
+  <body>
+    <h2>Edit Profile</h2>
+    <form action="/profile" method="POST" enctype="multipart/form-data">
+      <label>
+        Username:
+        <input
+          type="text"
+          name="username"
+          value="<%= user.username %>"
+          required
+        /> </label
+      ><br />
+
+      <label>
+        New Password:
+        <input type="password" name="password" /> </label
+      ><br />
+
+      <label>Confirm Password:</label>
+      <input type="password" name="confirmPassword" />
+      <br />
+
+      <label>
+        Profile Picture:
+        <input type="file" name="photo" /> </label
+      ><br />
+
+      <button type="submit">Save Changes</button>
+    </form>
+
+    <p><a href="/profile">Back to Profile</a></p>
+  </body>
+</html>
