@@ -6,6 +6,7 @@ const bookSchema = new mongoose.Schema({
   genre: { type: String, required: true },
   isAvailable: { type: Boolean, default: true },
   photo:{ type: String, default:null },
+  pdfFile: { type: String, required: true },
   review: [{ type: mongoose.Schema.Types.ObjectId, ref: 'Review' }]
 })
 

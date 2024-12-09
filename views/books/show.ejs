@@ -12,11 +12,9 @@
         Not Available
         <%}%>
   </h3>
-  <% if (book.pdfPath) { %>
-    <p>
-      <a href="/<%= book.pdfPath %>" target="_blank">Read PDF</a>
-    </p>
-  <% } %>
+  <p><img src="/<%= book.photo %>" alt="Book Photo" width="200"></p>
+  <p><a href="/<%= book.pdfFile %>" download>Download PDF</a></p>
+  
 
   <% if (user.isAdmin) { %>
     <form action="/books/<%= book._id %>?_method=DELETE" method="POST">
