@@ -22,7 +22,7 @@ router.get('/new', isAdmin, async (req, res) => {
   res.render('books/new.ejs')
 })
 
-router.post('/',upload.single('photo'), async (req, res) => {
+router.post('/',upload.fields([{ name: 'photo' }, { name: 'pdfFile' }]), async (req, res) => {
   try {
     const { title, author, description, genre, isAvailable } = req.body
 
@@ -32,7 +32,8 @@ router.post('/',upload.single('photo'), async (req, res) => {
       description,
       genre,
       isAvailable: isAvailable === 'on',
-      photo: req.file.path
+      photo: req.files.photo[0].path, 
+      pdfFile: req.files.pdfFile[0].path, 
     })
 
     await newBook.save()
