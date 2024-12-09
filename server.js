@@ -47,7 +47,15 @@ mongoose.connection.on('connected', () => {
   console.log(`Connected to mongoDB ${mongoose.connection.name}`)
 })
 
-
+const storage = multer.diskStorage({
+  destination: (req, file, cb) => {
+    cb(null, 'uploads/'); // Directory where files will be stored
+  },
+  filename: (req, file, cb) => {
+    cb(null, Date.now() + '-' + file.originalname); // Unique file name
+  },
+});
+const upload = multer({ storage });
 
 app.use(bodyParser.urlencoded({ extended: true }));
 

@@ -3,6 +3,8 @@ const User = require('../models/user')
 const Review = require('../models/review')
 const Book = require('../models/book')
 const isAdmin = require('../middleware/is-admin')
+const upload = require('../middleware/upload');
+
 
 router.get('/', async (req, res) => {
   try {
@@ -20,7 +22,7 @@ router.get('/new', isAdmin, async (req, res) => {
   res.render('books/new.ejs')
 })
 
-router.post('/', async (req, res) => {
+router.post('/',upload.single('photo'), async (req, res) => {
   try {
     const { title, author, description, genre, isAvailable } = req.body
 
@@ -29,7 +31,8 @@ router.post('/', async (req, res) => {
       author,
       description,
       genre,
-      isAvailable: isAvailable === 'on'
+      isAvailable: isAvailable === 'on',
+      photo: req.file.path
     })
 
     await newBook.save()
