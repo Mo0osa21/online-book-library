@@ -8,7 +8,7 @@
   /* Body and Background Image */
   body {
     height: 100vh;
-    background: url('/path-to-your-background-image.jpg') no-repeat center center fixed;
+    background: url('./123.jpeg') no-repeat center center fixed;
     background-size: cover;
     font-family: 'Roboto', sans-serif; /* Apply Roboto font */
     display: flex;

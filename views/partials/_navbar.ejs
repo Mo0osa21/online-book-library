@@ -2,23 +2,25 @@
 <% if (user && user.isAdmin ) { %>
 <div class="page2">
   <div class="links2">
+<a href="/profile">Profile</a>
 <a href="/books">View all Books</a>
 <a href="/books/new">add a New Book</a>
 <a href="/auth/sign-out">Sign Out</a>
 </div>
 </div>
 <% } else if(user){ %>
-  <div class="page3">
+  <div class="page2">
     <div class="links3">
+  <a href="/profile">Profile</a>
   <a href="/books">View all Books</a>
   <a href="/auth/sign-out">Sign Out</a>
 </div>
   </div>
 <% } else { %>
-  <div class="page1">
+  <div class="page2">
     <div class="links1">
   <a href="/auth/sign-up">Sign up</a>
-  <a href="/auth/sign-in">login </a>.
+  <a href="/auth/sign-in">login </a>
     </div>
     </div>
 <% } %>

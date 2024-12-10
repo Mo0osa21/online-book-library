@@ -1,10 +1,10 @@
-<link rel="stylesheet" href="/stylesheets/sign-up.css" />
+<link rel="stylesheet" href="/stylesheets/9.css" />
 
 <body>
   <%- include('../partials/_navbar.ejs') %>
   <div class="editpage">
     <h1>Update <%= book.title %></h1>
-
+    <div class="form-container">
     <form
       method="POST"
       action="/books/<%= book._id %>?_method=PUT"
@@ -62,5 +62,6 @@
 
       <button type="submit">Update Book</button>
     </form>
+  </div>
   </div>
 </body>

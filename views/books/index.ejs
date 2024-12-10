@@ -1,19 +1,25 @@
+<link rel="stylesheet" href="/stylesheets/6.css" />
+
 <body>
-  <%- include('../partials/_navbar.ejs') %>
+  <%- include('../partials/_navbar.ejs') %> <!-- Include Navbar -->
+
   <h1>All Books</h1>
+
+  <!-- Search Form -->
   <form action="/search" method="GET">
     <input type="text" name="query" placeholder="Search..." required />
     <button type="submit">Search</button>
-  <div class="index2page">
+  </form>
 
-  <ul>
+  <div class="index2page">
+    <!-- Books Container -->
     <% books.forEach((book) => { %>
       <div class="book">
-        <a href="/books/<%= book._id %>"> 
-          <img src="<%= book.imageUrl %>" alt="<%= book.title %>" />
+        <a href="/books/<%= book._id %>">
+          <img src="/<%= book.photo %>" alt="Book Photo">
         </a>
+      </div>
     <% }) %>
-  </ul>
   </div>
 </body>
-  
+
