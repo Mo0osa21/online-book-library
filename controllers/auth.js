@@ -33,7 +33,19 @@ router.post('/sign-up', upload.single('photo'), async (req, res) => {
       photo: req.file.path
     })
     await newUser.save()
-    res.send(`Thanks for signing up, ${newUser.username}`)
+
+    const userIsInDatabase = await User.findOne({ username })
+    if (!userIsInDatabase) {
+      return res.send('Invalid username or password. Please try again.')
+    }
+
+    req.session.user = {
+      username: userIsInDatabase.username,
+      _id: userIsInDatabase._id,
+      photo: userIsInDatabase.photo,
+      isAdmin: userIsInDatabase.isAdmin
+    }
+    res.redirect('/')
   } catch (error) {
     console.error(error)
     res.status(500).send('Something went wrong. Please try again.')
