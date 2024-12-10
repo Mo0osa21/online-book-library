@@ -63,10 +63,16 @@
       <% reviews.forEach((review) => { %>
         <div class="review">
           <strong><%= review.user.username %></strong>: <%= review.content %> (Rating: <%= review.value %>)
+          <% if (review.user._id.toString() === user._id.toString()) { %>
+            <a href="/reviews/<%= review._id %>/edit" class="edit-btn">Edit</a>
+            <form action="/reviews/<%= review._id %>?_method=DELETE" method="POST" style="display:inline;">
+              <button type="submit">Delete</button>
+            </form>
+          <% } %>
         </div>
       <% }) %>
     </div>
-    
+
 </body>
 
 </html>
