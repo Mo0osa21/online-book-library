@@ -4,37 +4,48 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Edit Profile</title>
+    <link rel="stylesheet" href="../stylesheets/5.css" />
   </head>
   <body>
-    <h2>Edit Profile</h2>
-    <form action="/profile" method="POST" enctype="multipart/form-data">
-      <label>
-        Username:
-        <input
-          type="text"
-          name="username"
-          value="<%= user.username %>"
-          required
-        /> </label
-      ><br />
+    <%- include('../partials/_navbar.ejs') %> 
 
-      <label>
-        New Password:
-        <input type="password" name="password" /> </label
-      ><br />
+    <div class="edit-page">
+      <div class="form-container">
+        <h2>Edit Profile</h2>
+        <form action="/profile" method="POST" enctype="multipart/form-data">
+          <label>
+            Username:
+            <input
+              type="text"
+              name="username"
+              value="<%= user.username %>"
+              required
+            />
+          </label>
+          <br />
 
-      <label>Confirm Password:</label>
-      <input type="password" name="confirmPassword" />
-      <br />
+          <label>
+            New Password:
+            <input type="password" name="password" />
+          </label>
+          <br />
 
-      <label>
-        Profile Picture:
-        <input type="file" name="photo" /> </label
-      ><br />
+          <label>Confirm Password:</label>
+          <input type="password" name="confirmPassword" />
+          <br />
 
-      <button type="submit">Save Changes</button>
-    </form>
+          <label>
+            Profile Picture:
+            <input type="file" name="photo" />
+          </label>
+          <br />
 
-    <p><a href="/profile">Back to Profile</a></p>
+          <button type="submit">Save Changes</button>
+        </form>
+      </div>
+
+      <p><a href="/profile">Back to Profile</a></p>
+    </div>
   </body>
 </html>
+

@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="/stylesheets/show.css" />
+  <link rel="stylesheet" href="/stylesheets/7.css" />
 
   <title>Document</title>
 </head>
@@ -14,13 +14,14 @@
 
     <div class="book-details">
       <!-- Left: Book Image -->
-      <div class="book-image">
-        <img src="/<%= book.photo %>" alt="Book Photo" width="200">
-      </div>
+      
       
       <!-- Right: Book Information -->
       <div class="book-info">
         <h1>Book Title: <%= book.title %></h1>
+        <div class="book-image">
+          <img src="/<%= book.photo %>" alt="Book Photo" width="200">
+        </div>
         <h3>Author: <%= book.author %></h3>
         <h3>Genre: <%= book.genre %></h3>
         <h3>
@@ -35,10 +36,10 @@
 
         <% if (user.isAdmin) { %>
           <div class="admin-actions">
+            <a href="/books/<%= book._id %>/edit" class="edit-btn">Edit this book</a>
             <form action="/books/<%= book._id %>?_method=DELETE" method="POST">
               <button type="submit" class="delete-btn">Delete this book</button>
             </form>
-            <a href="/books/<%= book._id %>/edit" class="edit-btn">Edit this book</a>
           </div>
         <% } %>
       </div>
@@ -71,6 +72,7 @@
         </div>
       <% }) %>
     </div>
+
 </body>
 
 </html>
