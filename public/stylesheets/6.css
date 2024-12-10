@@ -1,0 +1,124 @@
+/* General Styles */
+body {
+    font-family: 'Arial', sans-serif;
+    background: url('./background-image.jpg') no-repeat center center fixed; /* Set your background image */
+    background-size: cover;
+    color: #333;
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+  }
+  
+  /* Navbar Styling */
+  .page2 {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    display: flex;
+    flex-direction: column; /* Each navbar item in a column */
+    background-color: rgba(0, 0, 0, 0.5); /* Transparent background */
+    padding: 10px;
+    border-radius: 10px;
+  }
+  
+  .page2 a {
+    color: white;
+    text-decoration: none;
+    margin: 5px 0;
+    padding: 10px;
+    background-color: rgba(255, 255, 255, 0.3); /* Light transparent background */
+    border-radius: 5px;
+    text-align: center;
+  }
+  
+  .page2 a:hover {
+    background-color: rgba(127, 76, 175, 0.6); /* Change to purple on hover */
+    color: #fff;
+  }
+  
+  /* Title Styling */
+  h1 {
+    text-align: center;
+    font-size: 3em;
+    color: #c85cd0; /* White text */
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5); /* Slight shadow for contrast */
+    margin-top: 80px; /* Space from the navbar */
+    font-family: 'Montserrat', sans-serif; /* New font for the title */
+  }
+  
+  /* Search Bar */
+  form {
+    display: flex;
+    justify-content: center;
+    margin: 20px 0;
+  }
+  
+  input[type="text"] {
+    padding: 10px;
+    font-size: 1em;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    margin-right: 10px;
+    width: 300px;
+  }
+  
+  button[type="submit"] {
+    padding: 10px 20px;
+    font-size: 1em;
+    background-color: #3498db;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  button[type="submit"]:hover {
+    background-color: #2980b9;
+  }
+  
+  /* Books Display Grid */
+  .index2page {
+    width: 90%;
+    max-width: 1200px;
+    margin: 20px auto;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* 3 books per row */
+    gap: 20px; /* Space between the items */
+    justify-items: center;
+  }
+  
+  .book {
+    background-color: rgba(255, 255, 255, 0.7); /* Semi-transparent background */
+    border-radius: 10px;
+    padding: 20px;
+    text-align: center;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+  }
+  
+  .book:hover {
+    transform: translateY(-10px); /* Slight hover effect */
+  }
+  
+  .book img {
+    width: 200px;
+    height: 300px;
+    object-fit: cover; /* Ensure the image fits within the box */
+    border-radius: 8px;
+  }
+  
+  /* Optional: Style the book title if you want to add it */
+  .book a {
+    text-decoration: none;
+    color: #333;
+  }
+  
+  .book a:hover {
+    text-decoration: underline;
+  }
+  
+  
