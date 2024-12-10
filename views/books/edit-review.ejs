@@ -1,10 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="/stylesheets/10.css" /> <!-- Include your updated CSS -->
+  <title>Edit Review</title>
+</head>
 <body>
   <form action="/reviews/<%= review._id %>?_method=PUT" method="POST">
+    <h2>Edit Your Review</h2>
+    
     <label>
       Content:
       <textarea name="content" required><%= review.content %></textarea>
     </label>
-    <br />
+
     <label>
       Rating:
       <input
@@ -16,7 +26,9 @@
         required
       />
     </label>
-    <br />
+
     <button type="submit">Update Review</button>
   </form>
 </body>
+</html>
+

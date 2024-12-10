@@ -4,7 +4,7 @@
 /* General Styles */
 body {
   font-family: 'Montserrat', sans-serif; 
-  background: url('./12233.jpg') no-repeat center center fixed; 
+  background: url('./122334.jpg') no-repeat center center fixed; 
   background-size: cover;
   color: #333;
   margin: 0;
@@ -20,7 +20,7 @@ body {
   width: 90%;
   max-width: 800px; /* Adjust the maximum width as needed */
   padding: 10px;
-  background-color: rgba(255, 255, 255, 0.8); /* Semi-transparent white background */
+  background-color: rgba(167, 155, 155, 0.8); /* Semi-transparent white background */
   border-radius: 10px;
   box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.3);
   text-align: center;

@@ -1,0 +1,144 @@
+
+  /* General Styles */
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background: url('./122334.jpg') no-repeat center center fixed;
+    background-size: cover;
+    color: white; /* Change all text color to white */
+  }
+  
+  /* Navbar Styling */
+  .page2 {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    display: flex;
+    flex-direction: column; /* Each navbar item in a column */
+    background-color: rgba(0, 0, 0, 0.5); /* Transparent background */
+    padding: 10px;
+    border-radius: 10px;
+  }
+  
+  .page2 a {
+    color: white;
+    text-decoration: none;
+    margin: 5px 0;
+    padding: 10px;
+    border-radius: 5px;
+    text-align: center;
+  }
+  
+  .page2 a:hover {
+    background-color: rgba(127, 76, 175, 0.6);
+  }
+  
+  /* Show Page Styling */
+  .showpage {
+    display: flex;
+    justify-content: space-between;
+    padding: 50px;
+    flex-wrap: wrap;
+  }
+  
+  .book-details {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+  }
+  
+  .book-info-left {
+    flex: 1;
+    padding-right: 20px;
+  }
+  
+  .book-info-right {
+    flex: 1;
+    padding-left: 20px;
+  }
+  
+  /* Book Title and Image */
+  .book-title {
+    font-size: 2.5em;
+    color: #fff; /* Title color */
+    margin-bottom: 20px;
+  }
+  
+  .book-image img {
+    width: 300px;
+    height: 450px;
+    object-fit: cover;
+    border-radius: 10px;
+  }
+  
+  /* Buttons and Links Styling - Transparent black buttons */
+  .download-pdf, .edit-btn, .delete-btn, .submit-review {
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-decoration: none;
+    color: white;
+    background-color: rgba(0, 0, 0, 0.5); /* Transparent black background */
+    border: 2px solid rgba(255, 255, 255, 0.6); /* White border */
+    text-align: center;
+    margin-top: 10px;
+    display: inline-block;
+  }
+  
+  .download-pdf:hover, .edit-btn:hover, .delete-btn:hover, .submit-review:hover {
+    background-color: rgba(0, 0, 0, 0.7); /* Darker black background on hover */
+    border-color: rgba(255, 255, 255, 0.8); /* Lighter border on hover */
+  }
+  
+  /* Review Section */
+  .review-section {
+    margin-top: 30px;
+  }
+  
+  .review-section h2 {
+    font-size: 1.5em;
+    margin-bottom: 10px;
+  }
+  
+  .review-section form {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .review-section textarea, .review-section input {
+    margin-bottom: 10px;
+    padding: 10px;
+    font-size: 1em;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+  }
+  
+  .submit-review {
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  .submit-review:hover {
+    background-color: rgba(0, 0, 0, 0.7);
+  }
+  
+  .review {
+    margin-bottom: 15px;
+    padding: 10px;
+    background-color: rgba(44, 40, 40, 0.8);
+    border-radius: 10px;
+  }
+  
+  .review a {
+    margin-left: 10px;
+    text-decoration: none;
+    color: #efefef;
+  }
+  
+  .review a:hover {
+    text-decoration: underline;
+  }
+  
