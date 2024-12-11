@@ -1,76 +1,91 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="/stylesheets/7.css" />
-  <title>Book Details</title>
-</head>
-<body>
-  <%- include('../partials/_navbar.ejs') %> <!-- Include Navbar -->
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/stylesheets/7.css" />
+    <title>Book Details</title>
+  </head>
+  <body>
+    <%- include('../partials/_navbar.ejs') %>
+    <!-- Include Navbar -->
 
-  <div class="showpage">
-
-    <div class="book-details">
-      <div class="book-info-left">
-        <h1 class="book-title"><%= book.title %></h1>
-        <div class="book-image">
-          <img src="/<%= book.photo %>" alt="Book Photo">
+    <div class="showpage">
+      <div class="book-details">
+        <div class="book-info-left">
+          <h1 class="book-title"><%= book.title %></h1>
+          <div class="book-image">
+            <img src="/<%= book.photo %>" alt="Book Photo" />
+          </div>
         </div>
-      </div>
 
-      <div class="book-info-right">
-        <h3>Author: <%= book.author %></h3>
-        <h3>Genre: <%= book.genre %></h3>
-        <h3>
-          <% if (book.isAvailable) { %>
-            Available
-          <% } else { %>
-            Not Available
-          <% } %>
-        </h3>
-        <p><a href="/<%= book.pdfFile %>" download class="download-pdf">Download PDF</a></p>
+        <div class="book-info-right">
+          <h3>Author: <%= book.author %></h3>
+          <h3>Genre: <%= book.genre %></h3>
+          <h3>
+            <% if (book.isAvailable) { %> Available <% } else { %> Not Available
+            <% } %>
+          </h3>
+          <p>
+            <a href="/<%= book.pdfFile %>" download class="download-pdf"
+              >Download PDF</a
+            >
+          </p>
 
-        <% if (user.isAdmin) { %>
+          <% if (user.isAdmin) { %>
           <div class="admin-actions">
-            <a href="/books/<%= book._id %>/edit" class="edit-btn">Edit this book</a>
+            <a href="/books/<%= book._id %>/edit" class="edit-btn"
+              >Edit this book</a
+            >
             <form action="/books/<%= book._id %>?_method=DELETE" method="POST">
               <button type="submit" class="delete-btn">Delete this book</button>
             </form>
           </div>
-        <% } %>
+          <% } %>
 
-        <!-- Review Section -->
-        <div class="review-section">
-          <h2>Leave a Review:</h2>
-          <form action="/reviews" method="POST">
-            <input type="hidden" name="book" value="<%= book._id %>" />
-            <label for="content">Comment:</label>
-            <textarea name="content" id="content" required></textarea>
-            <br />
-            <label for="value">Rating:</label>
-            <input type="number" name="value" id="value" min="1" max="5" required />
-            <br />
-            <button type="submit" class="submit-review">Submit Review</button>
-          </form>
+          <!-- Review Section -->
+          <div class="review-section">
+            <h2>Leave a Review:</h2>
+            <form action="/reviews" method="POST">
+              <input type="hidden" name="book" value="<%= book._id %>" />
+              <label for="content">Comment:</label>
+              <textarea name="content" id="content" required></textarea>
+              <br />
+              <label for="value">Rating:</label>
+              <input
+                type="number"
+                name="value"
+                id="value"
+                min="1"
+                max="5"
+                required
+              />
+              <br />
+              <button type="submit" class="submit-review">Submit Review</button>
+            </form>
 
-          <h2>Reviews:</h2>
-          <% reviews.forEach((review) => { %>
+            <h2>Reviews:</h2>
+            <% reviews.forEach((review) => { %>
             <div class="review">
-              <strong><%= review.user.username %></strong>: <%= review.content %> (Rating: <%= review.value %>)
-              <% if (review.user._id.toString() === user._id.toString()) { %>
-                <a href="/reviews/<%= review._id %>/edit" class="edit-btn">Edit</a>
-                <form action="/reviews/<%= review._id %>?_method=DELETE" method="POST" style="display:inline;">
-                  <button type="submit">Delete</button>
-                </form>
+              <strong><%= review.user.username %></strong>: <%= review.content
+              %> (Rating: <%= review.value %>/5) <% if
+              (review.user._id.toString() === user._id.toString()) { %>
+              <a href="/reviews/<%= review._id %>/edit" class="edit-btn"
+                >Edit</a
+              >
+              <form
+                action="/reviews/<%= review._id %>?_method=DELETE"
+                method="POST"
+                style="display: inline"
+              >
+                <button type="submit">Delete</button>
+              </form>
               <% } %>
             </div>
-          <% }) %>
+            <% }) %>
+          </div>
         </div>
       </div>
     </div>
-
-  </div>
-
-</body>
+  </body>
 </html>
