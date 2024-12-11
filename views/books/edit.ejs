@@ -1,67 +1,40 @@
 <link rel="stylesheet" href="/stylesheets/9.css" />
 
 <body>
-  <%- include('../partials/_navbar.ejs') %>
+  <%- include('../partials/_navbar.ejs') %> <!-- Include the navbar -->
   <div class="editpage">
     <h1>Update <%= book.title %></h1>
-    <div class="form-container">
-    <form
-      method="POST"
-      action="/books/<%= book._id %>?_method=PUT"
-      enctype="multipart/form-data"
-    >
-      <label for="title">Book Title:</label>
-      <input
-        type="text"
-        name="title"
-        id="title"
-        value="<%= book.title %>"
-        required
-      />
-      <br />
+    <div class="form-frame">
+      <div class="form-container">
+        <form method="POST" action="/books/<%= book._id %>?_method=PUT" enctype="multipart/form-data">
+          <label for="title">Book Title:</label>
+          <input type="text" name="title" id="title" value="<%= book.title %>" required /><br />
 
-      <label for="author">Author:</label>
-      <input
-        type="text"
-        name="author"
-        id="author"
-        value="<%= book.author %>"
-        required
-      />
-      <br />
+          <label for="author">Author:</label>
+          <input type="text" name="author" id="author" value="<%= book.author %>" required /><br />
 
-      <label for="genre">Genres:</label>
-      <input
-        type="text"
-        name="genre"
-        id="genre"
-        value="<%= book.genre %>"
-        required
-      />
-      <br />
+          <label for="genre">Genres:</label>
+          <input type="text" name="genre" id="genre" value="<%= book.genre %>" required /><br />
 
-      <label for="isAvailable">Available:</label>
-      <input type="checkbox" name="isAvailable" id="isAvailable" <%=
-      book.isAvailable ? 'checked' : '' %> />
-      <br />
+          <label for="isAvailable">Available:</label>
+          <input type="checkbox" name="isAvailable" id="isAvailable" <%= book.isAvailable ? 'checked' : '' %> /><br />
 
-      <label for="photo">Book Photo:</label>
-      <input type="file" name="photo" /><br /><br />
-      <% if (book.photo) { %>
-      <img src="/<%= book.photo %>" alt="Book Photo" width="100" /><br /><br />
-      <% } %>
-      <br />
+          <label for="photo">Book Photo:</label>
+          <input type="file" name="photo" /><br /><br />
+          <% if (book.photo) { %>
+            <img src="/<%= book.photo %>" alt="Book Photo" width="100" /><br /><br />
+          <% } %>
 
-      <label for="pdfFile">Book PDF:</label>
-      <input type="file" name="pdfFile" /><br /><br />
-      <% if (book.pdfFile) { %>
-      <a href="/<%= book.pdfFile %>" download>Download Current PDF</a
-      ><br /><br />
-      <% } %>
-      <br />
+          <label for="pdfFile">Book PDF:</label>
+          <input type="file" name="pdfFile" /><br /><br />
+          <% if (book.pdfFile) { %>
+            <a href="/<%= book.pdfFile %>" download>Download Current PDF</a><br /><br />
+          <% } %>
 
-      <button type="submit">Update Book</button>
-    </form>
-  </div>
+          <button type="submit">Update Book</button>
+        </form>
+      </div>
+    </div>
   </div>
 </body>
+

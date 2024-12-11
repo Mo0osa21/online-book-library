@@ -62,6 +62,9 @@ router.get('/:bookId', async (req, res) => {
   }
 })
 
+
+
+
 router.get('/:bookId/edit', isAdmin, async (req, res) => {
   try {
     const currentBook = await Book.findById(req.params.bookId)

@@ -1,4 +1,3 @@
-/* General Styles */
 body {
     font-family: 'Arial', sans-serif;
     background: url('./122334.jpg') no-repeat center center fixed; /* Set your background image */
@@ -19,8 +18,8 @@ body {
     top: 20px;
     left: 20px;
     display: flex;
-    flex-direction: column; /* Each navbar item in a column */
-    background-color: rgba(0, 0, 0, 0.5); /* Transparent background */
+    flex-direction: column; 
+    background-color: rgba(0, 0, 0, 0.5); 
     padding: 10px;
     border-radius: 10px;
   }
@@ -29,28 +28,29 @@ body {
     color: white;
     text-decoration: none;
     margin: 5px 0;
-    padding: 10px;
-    background-color: rgba(255, 255, 255, 0.3); /* Light transparent background */
+    background-color: rgba(255, 255, 255, 0.3); 
     border-radius: 5px;
     text-align: center;
+    padding: 15px 25px; 
+  font-size: 1.2em; 
   }
   
   .page2 a:hover {
-    background-color: rgba(127, 76, 175, 0.6); /* Change to purple on hover */
+    background-color: rgba(127, 76, 175, 0.6); 
     color: #fff;
   }
   
-  /* Title Styling */
+
   h1 {
     text-align: center;
     font-size: 3em;
-    color: #c85cd0; /* White text */
-    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5); /* Slight shadow for contrast */
-    margin-top: 80px; /* Space from the navbar */
-    font-family: 'Montserrat', sans-serif; /* New font for the title */
+    color: #c85cd0; 
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5); 
+    margin-top: 80px; 
+    font-family: 'Montserrat', sans-serif; 
   }
   
-  /* Search Bar */
+ 
   form {
     display: flex;
     justify-content: center;
@@ -80,19 +80,19 @@ body {
     background-color: #2980b9;
   }
   
-  /* Books Display Grid */
+ 
   .index2page {
     width: 90%;
     max-width: 1200px;
     margin: 20px auto;
     display: grid;
-    grid-template-columns: repeat(3, 1fr); /* 3 books per row */
-    gap: 20px; /* Space between the items */
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px; 
     justify-items: center;
   }
   
   .book {
-    background-color: rgba(255, 255, 255, 0.7); /* Semi-transparent background */
+    background-color: rgba(255, 255, 255, 0.7); 
     border-radius: 10px;
     padding: 20px;
     text-align: center;
@@ -101,17 +101,16 @@ body {
   }
   
   .book:hover {
-    transform: translateY(-10px); /* Slight hover effect */
+    transform: translateY(-10px);
   }
   
   .book img {
     width: 200px;
     height: 300px;
-    object-fit: cover; /* Ensure the image fits within the box */
+    object-fit: cover; 
     border-radius: 8px;
   }
   
-  /* Optional: Style the book title if you want to add it */
   .book a {
     text-decoration: none;
     color: #333;

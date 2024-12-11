@@ -4,6 +4,10 @@
 - Moosa Jameel
 - Ahmed Yousif 
 - Noor Husain
+
+**Trello board link :**
+https://trello.com/invite/b/67505bdd64c4b46ff51dfbfb/ATTI3e9abfb59aa1c0f1d434e2e008f9e79fE13758E4/online-book-library
+
 ----------------------------------------------------
 
 online app allows the user to check whether the book is available or not.
@@ -17,8 +21,7 @@ the app  will initially ask the user to create an account with the username and 
 3. rate the book after reading.
 4. get the book in PDF format.
 
-**Trello board link :**
-https://trello.com/invite/b/67505bdd64c4b46ff51dfbfb/ATTI3e9abfb59aa1c0f1d434e2e008f9e79fE13758E4/online-book-library
+
 
 -----------------------------------------------------
 **Project ERD:**
@@ -56,9 +59,13 @@ https://trello.com/invite/b/67505bdd64c4b46ff51dfbfb/ATTI3e9abfb59aa1c0f1d434e2e
 
 **List of unsolved problems:**
 --------------------------------------------------
+1. search for the book by title. 
+2. borrow option which the app must be linked 
+to a real library.
 
 
 **Future enhancements:**
 -------------------------------------------------
-1.  the app can combine several libraries, Which makes it easier for the user to find the desired book.
-2. 
+1.  The app can combine several libraries, Which makes it easier for the user to find the desired book.
+2.  Dividing books into different categories to facilitate the user's search process
+3.  Add book summary.

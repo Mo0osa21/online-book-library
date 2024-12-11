@@ -1,11 +1,11 @@
-/* General Styles */
+
 body {
     font-family: 'Arial', sans-serif;
     margin: 0;
     padding: 0;
     background: url('./122334.jpg') no-repeat center center fixed;
     background-size: cover;
-    color: white; /* Change all text color to white */
+    color: white; 
     display: flex;
     justify-content: center;
     align-items: center;
@@ -13,7 +13,7 @@ body {
   }
   
   form {
-    background-color: rgba(0, 0, 0, 0.7); /* Transparent black background */
+    background-color: rgba(0, 0, 0, 0.7); 
     padding: 20px;
     border-radius: 10px;
     width: 50%;
@@ -32,23 +32,23 @@ body {
     font-size: 1.2em;
     border-radius: 5px;
     border: 1px solid #ccc;
-    background-color: rgba(255, 255, 255, 0.2); /* Slightly transparent background for input fields */
+    background-color: rgba(255, 255, 255, 0.2); 
     color: white;
   }
   
   button {
     padding: 10px 20px;
     font-size: 1.2em;
-    background-color: rgba(0, 0, 0, 0.5); /* Transparent black background */
+    background-color: rgba(0, 0, 0, 0.5); 
     color: white;
     border-radius: 5px;
     cursor: pointer;
-    border: 2px solid rgba(255, 255, 255, 0.6); /* White border */
+    border: 2px solid rgba(255, 255, 255, 0.6); 
   }
   
   button:hover {
-    background-color: rgba(0, 0, 0, 0.7); /* Darker on hover */
-    border-color: rgba(255, 255, 255, 0.8); /* Lighter border on hover */
+    background-color: rgba(0, 0, 0, 0.7); 
+    border-color: rgba(255, 255, 255, 0.8); 
   }
   
   h2 {

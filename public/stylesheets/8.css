@@ -1,15 +1,13 @@
-/* Global Reset */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
   }
   
-  /* Background Image */
   body {
     height: 100vh;
     font-family: 'Roboto', sans-serif; 
-    background: url('./123.jpeg') no-repeat center center fixed;
+    background: url('./122334.jpg') no-repeat center center fixed;
     background-size: cover;
     display: flex;
     justify-content: center;
@@ -18,66 +16,63 @@
   }
   
   .editpage {
-    background: rgba(107, 104, 88, 0.7); /* Semi-transparent background */
+    background:  rgba(255, 255, 255, 0.3); 
     padding: 40px;
     border-radius: 8px;
     box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.3);
     width: 100%;
-    max-width: 600px; /* Max width for the form */
+    max-width: 600px; 
     text-align: center;
   }
   
-  /* Form Title */
   h1 {
-    font-family: 'Open Sans', sans-serif; /* Apply Open Sans for headings */
-    font-weight: 600; /* Make the headings bold */
+    font-family: 'Open Sans', sans-serif; 
+    font-weight: 600; 
     font-size: 2.5em;
     margin-bottom: 20px;
     color: #efe6e6;
   }
   
   .page2 {
-    font-family: 'Open Sans', sans-serif; /* Apply Open Sans for navbar links */
-    flex: 0 0 auto; /* Remove fixed width */
+    font-family: 'Open Sans', sans-serif; 
+    flex: 0 0 auto; 
     padding: 20px;
     border-radius: 8px;
     box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.3);
     display: flex;
-    flex-direction: column; /* Stack the links vertically (column) */
-    justify-content: flex-start; /* Align the items to the top */
-    align-items: center; /* Center the links horizontally */
-    margin-right: 20px; /* Space between navbar and form */
+    flex-direction: column; 
+    justify-content: flex-start; 
+    align-items: center; 
+    margin-right: 20px; 
     width: 100%;
   }
   
-  /* Styling for Each Link Inside the Navbar */
   .page2 a {
-    display: block; /* Set each link to block level to stack them vertically */
-    margin-bottom: 15px; /* Add space between the links */
-    padding: 10px 15px; /* Add padding to make the links feel like buttons */
-    background: rgba(255, 255, 255, 0.3); /* Transparent white background for the link */
+    display: block; 
+    margin-bottom: 15px; 
+    padding: 15px 25px; 
+    font-size: 1.2em; 
+    background: rgba(255, 255, 255, 0.3); 
     border-radius: 5px;
     text-decoration: none;
-    color: #000000; /* Dark text color */
-    transition: all 0.3s ease-in-out; /* Smooth transition for hover effect */
+    color: #000000; 
+    transition: all 0.3s ease-in-out; 
   }
   
-  /* Hover Effect for Links */
   .page2 a:hover {
-    background: rgba(127, 76, 175, 0.5); /* Transparent purple background on hover */
-    color: #fff; /* White text color when hovered */
-    transform: scale(1.05); /* Slight zoom effect */
+    background: rgba(127, 76, 175, 0.5); 
+    color: #fff; 
+    transform: scale(1.05); 
   }
-  /* The form container */
+
   .form-container {
-    background: rgba(107, 104, 88, 0.7); /* Semi-transparent background */
+    background: rgba(107, 104, 88, 0.7);
     padding: 40px;
     border-radius: 8px;
     box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.3);
-    width: 100%; /* Takes the rest of the space */
+    width: 100%; 
     max-width: 600px;
   }
-  /* Input fields */
   input[type="text"],
   input[type="file"],
   input[type="checkbox"] {
@@ -90,20 +85,18 @@
     margin-bottom: 15px;
   }
   
-  /* Focus effect for text inputs */
+  
   input[type="text"]:focus {
     border-color: #4CAF50;
     outline: none;
     background: #fff;
   }
   
-  /* Checkbox styling */
   input[type="checkbox"] {
     width: auto;
     margin: 0;
   }
   
-  /* File input styling (optional) */
   input[type="file"] {
     padding: 10px;
     background-color: #f7f7f7;
@@ -114,7 +107,6 @@
     background-color: #f1f1f1;
   }
   
-  /* Submit Button */
   button[type="submit"] {
     width: 100%;
     padding: 12px;
@@ -128,10 +120,9 @@
   }
   
   button[type="submit"]:hover {
-    background-color: #45a049;
+    background-color: #912ca1;
   }
   
-  /* Optional: Style links if you have any */
   a {
     color: #007bff;
     text-decoration: none;

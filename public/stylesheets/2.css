@@ -1,24 +1,24 @@
-/* Global Reset */
+
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
   }
   
-  /* Body and Background Image */
+ 
   body {
     height: 100vh;
-    background: url('./123.jpeg') no-repeat center center fixed;
+    background: url('./122334.jpg') no-repeat center center fixed;
     background-size: cover;
-    font-family: 'Roboto', sans-serif; /* Apply Roboto font */
+    font-family: 'Roboto', sans-serif;
     display: flex;
     justify-content: center;
     align-items: center;
   }
   
-  /* Container for form */
+
   .form2-container {
-    background: rgba(255, 255, 255, 0.9); /* Semi-transparent white background */
+    background: rgba(64, 61, 61, 0.7); 
     padding: 40px;
     border-radius: 8px;
     box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.3);
@@ -26,20 +26,20 @@
     max-width: 500px;
   }
   
-  /* Form Heading */
+ 
   h1 {
-    font-family: 'Open Sans', sans-serif; /* Heading font */
-    font-weight: 600; /* Make heading bold */
+    font-family: 'Open Sans', sans-serif; 
+    font-weight: 600; 
     font-size: 2.5em;
     margin-bottom: 20px;
-    color: #333;
+    color: #f1eded;
   }
   
   /* Label Styling */
   label {
     font-size: 1.1em;
     margin-bottom: 5px;
-    color: #333;
+    color: #f8f5f5;
     display: block;
   }
   
@@ -68,7 +68,7 @@
     background-color: #f7f7f7;
   }
   
-  /* Photo Preview (image preview for file upload) */
+ 
   #photoPreview img {
     max-width: 100%;
     height: auto;
@@ -80,7 +80,7 @@
     width: 100%;
     padding: 12px;
     font-size: 1.1em;
-    background-color: #4CAF50;
+    background-color: #790679;
     color: white;
     border: none;
     border-radius: 5px;
@@ -89,18 +89,9 @@
   }
   
   button[type="submit"]:hover {
-    background-color: #45a049;
+    background-color: #844384;
   }
   
-  /* Mobile responsiveness */
-  @media (max-width: 768px) {
-    .form2-container {
-      padding: 30px;
-    }
-  
-    h1 {
-      font-size: 2em;
-    }
-  }
+
   
   

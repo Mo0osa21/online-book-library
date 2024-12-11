@@ -1,122 +1,131 @@
-/* Global Reset */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-  }
-  
-  /* Body Styling */
-  body {
-    font-family: 'Roboto', sans-serif;
-    background: url('./background-image.jpg') no-repeat center center fixed;
-    background-size: cover;
-    min-height: 100vh;
-    color: #333;
-  }
-  
-  /* Navbar Styling (page2) */
-  .page2 {
-    display: flex;
-    justify-content: space-between;
-    background: rgba(0, 0, 0, 0.7); /* Semi-transparent background */
-    padding: 15px;
-    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
-  }
-  
-  .page2 a {
-    color: white;
-    text-decoration: none;
-    margin: 0 10px;
-    padding: 12px 20px;
-    background: rgba(255, 255, 255, 0.2);
-    border-radius: 5px;
-    transition: background 0.3s;
-  }
-  
-  .page2 a:hover {
-    background: rgba(255, 255, 255, 0.5); /* Lighter background on hover */
-  }
-  
-  /* Edit Page Styling */
-  .edit-page {
-        background: rgba(107, 104, 88, 0.7); /* Semi-transparent background */
-        padding: 40px;
-        border-radius: 8px;
-        box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.3);
-        width: 100%;
-        max-width: 600px; /* Max width for the form */
-        text-align: center;
-      }
 
-  
-  /* Form Container */
-  .form-container {
-    background: rgba(107, 104, 88, 0.7); /* Semi-transparent background */
-    padding: 40px;
-    border-radius: 8px;
-    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.3);
-    width: 100%; /* Takes the rest of the space */
-    max-width: 600px;
-  }
-  
-  h2 {
-    text-align: center;
-    font-size: 2em;
-    margin-bottom: 20px;
-    color: #2c3e50;
-  }
-  
-  /* Form Label and Inputs */
-  label {
-    display: block;
-    margin-bottom: 10px;
-    font-size: 1.1em;
-    color: #34495e;
-  }
-  
-  input[type="text"],
-  input[type="password"],
-  input[type="file"] {
-    width: 100%;
-    padding: 12px;
-    font-size: 1.1em;
-    margin-bottom: 15px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    background-color: #f7f7f7;
-  }
-  
-  input[type="text"]:focus,
-  input[type="password"]:focus {
-    border-color: #3498db; /* Blue border on focus */
-    outline: none;
-    background-color: #fff;
-  }
-  
-  button[type="submit"] {
-    width: 100%;
-    padding: 12px;
-    font-size: 1.2em;
-    background-color: #3498db;
-    color: white;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: background-color 0.3s;
-  }
-  
-  button[type="submit"]:hover {
-    background-color: #2980b9; /* Darker blue on hover */
-  }
-  
-  /* Link Styling */
-  a {
-    color: #3498db;
-    text-decoration: none;
-    font-size: 1.1em;
-  }
-  
-  a:hover {
-    text-decoration: underline;
-  }
-  
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Roboto', sans-serif;
+  background: url('./122334.jpg') no-repeat center center fixed;
+  background-size: cover;
+  min-height: 100vh;
+  color: #333;
+  display: flex;
+  justify-content: center; 
+  align-items: center; 
+  flex-direction: column; 
+}
+
+
+.page2 {
+  display: flex;
+  justify-content: space-between;
+  background: rgba(0, 0, 0, 0.7); 
+  padding: 15px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
+  width: 100%;
+  position: fixed;
+  top: 0; 
+  left: 0;
+  z-index: 100;
+}
+
+.page2 a {
+  color: white;
+  text-decoration: none;
+  margin: 0 10px;
+  padding: 12px 20px;
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 5px;
+  transition: background 0.3s;
+}
+
+.page2 a:hover {
+  background: rgba(204, 55, 212, 0.5); 
+}
+
+
+.edit-page {
+  background: rgba(55, 54, 47, 0.7); 
+  padding: 40px;
+  border-radius: 8px;
+  box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.3);
+  width: 100%;
+  max-width: 600px; 
+  text-align: center;
+  z-index: 10;
+  margin-top: 80px; 
+}
+
+
+.form-container {
+  background:rgba(55, 54, 47, 0.7); 
+  padding: 40px;
+  border-radius: 8px;
+  box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.3);
+  width: 100%;
+  max-width: 600px;
+  margin: 0 auto; 
+}
+
+h2 {
+  text-align: center;
+  font-size: 2em;
+  margin-bottom: 20px;
+  color: #f4f7fa;
+}
+
+/* Form Label and Inputs */
+label {
+  display: block;
+  margin-bottom: 10px;
+  font-size: 1.1em;
+  color: #fafcfd;
+}
+
+input[type="text"],
+input[type="password"],
+input[type="file"] {
+  width: 100%;
+  padding: 12px;
+  font-size: 1.1em;
+  margin-bottom: 15px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  background-color: #f7f7f7;
+}
+
+input[type="text"]:focus,
+input[type="password"]:focus {
+  border-color: #f0f6f9;
+  outline: none;
+  background-color: #fff;
+}
+
+button[type="submit"] {
+  width: 100%;
+  padding: 12px;
+  font-size: 1.2em;
+  background-color: #802b7d;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+button[type="submit"]:hover {
+  background-color: #d157d1; 
+}
+
+/* Link Styling */
+a {
+  color: #3498db;
+  text-decoration: none;
+  font-size: 1.1em;
+}
+
+a:hover {
+  text-decoration: underline;
+}
